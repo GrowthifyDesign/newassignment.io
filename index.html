@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">      
+    <form action="https://api.web3forms.com/submit" method="POST"> <input type="hidden" name="apikey" value="345d5153-dc30-43dd-b154-56ac3651b7b6"> 
+
+        <label for="name">Name</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <div class="h-captcha" data-captcha="true"></div>
+          <div class="send">                       
+          <input type="submit"value="Submit form">
+        </div>
+          <form action="https://api.web3forms.com/submit" method="POST"></form>                                   
+        </div>
+    </div>
+    </div>
+    </form>
+    <script>
+        const form = document.getElementById('YOUR_FORM_ID');
+        
+        form.addEventListener('submit', function(e) {
+        
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+        
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+        </script><script>
+const form = document.getElementById('YOUR_FORM_ID');
+
+form.addEventListener('submit', function(e) {
+
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
+    }
+});
+</script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>  
+</body>
+</html>
